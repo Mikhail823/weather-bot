@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-table-subscriber" author="Mikhail">
+        <createTable tableName="subscriber">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="true"/>
+            </column>
+            <column name="chat_id" type="java.lang.Long">
+                <constraints nullable="true"/>
+            </column>
+            <column name="city" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="is_subscription" type="boolean">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,21 @@
+spring:
+  liquibase:
+    enabled: false
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+
+  jpa:
+    generate-ddl: false
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:postgresql://amvera-miha823-cnpg-postgres-rw:5432/weather
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+url:
+  api: http://api.weatherapi.com/v1/current/json?key=c692082fc1d2481e848205427242010&q=
